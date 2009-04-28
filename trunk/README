@@ -1,0 +1,47 @@
+#
+# File   : README
+# Author : Baoqiu Cui <cbaoqiu AT yahoo DOT com>
+#
+# $Id$
+#  
+
+This is an XSL stylesheet that converts DocBook documents
+(http://www.docbook.org/) to TWiki (http://www.twiki.org/) format.
+
+This project was started soon after I finished the DocBook exporter (see
+http://code.google.com/p/bcui-emacs) for Emacs Org-mode
+(http://orgmode.org/).  Since I use TWiki at work, I have been hoping
+that I can export text files written in Org-mode into TWiki format using
+DocBook format as a bridge, assuming that somebody already wrote a
+stylesheet that converts DocBook documents to TWiki format.  However, I
+failed to find such a stylesheet after several hours of searching...
+
+This stylesheet is far from complete, but most of the formatting
+features supported in Org-mode are supported here.
+
+This directory contains:
+
+  README
+      This file.
+  
+  docbook2twiki.xsl
+      The XSL stylesheet.
+
+  org-twiki.el
+      Sample Emacs Lisp function that converts Org file to TWiki format
+      using ``Org-mode DocBook exporter + docbook2twiki.xsl.''
+  
+  test.org
+      Org file used for testing.
+  
+  test.twiki
+      TWiki file converted from test.xml using docbook2twiki.xsl.
+
+  test.xml
+      DocBook XML file exported from test.org.
+  
+If you have any comments on how to improve this stylesheet, please send
+email to cbaoqiu AT yahoo DOT com.
+
+Thanks,
+Baoqiu Cui
