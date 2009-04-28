@@ -34,7 +34,7 @@
      Some code and ideas are copied from DocBook2Wiki.xsl that is
      included in the contrib/ directory of DocBook 1.74.0.
    
-     $Id: docbook2twiki.xsl,v 1.49 2009/04/28 00:36:41 bcui Exp $
+     $Id$
 
      *******************************************************************
 -->
