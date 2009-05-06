@@ -48,6 +48,12 @@
 <xsl:strip-space elements="*"/>
 
 <xsl:template match="/">
+  <xsl:text>---+!! </xsl:text>
+  <xsl:value-of select="/d:article/d:title"/>
+  <xsl:text>
+
+%TOC%
+</xsl:text>
   <xsl:apply-templates/>
   <xsl:variable name="version">1.0</xsl:variable>
   <xsl:text>
