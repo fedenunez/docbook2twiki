@@ -98,26 +98,26 @@ superscript.  We may need to find other better-looking formats.
 
 * Inline Tasks (TODOs)
 
-This sections contains some inline task:
+This sections contains some inline tasks (OBSOLETE):
 
-**************** TODO some small task
-                 DEADLINE: <2009-03-30 Mon>
-                 :PROPERTIES:
-                   :SOMETHING: or other
-                 :END:
-                 And here is some extra text
-**************** END
-
-**************** TODO This is the first inline TODO
-                 I need to do that following thing for the first TODO:
-                 1. First item for first TODO
-                 2. Second item for first TODO
-
-**************** TODO This is the second inline TODO
-                 This is my second TODO.
-
-**************** TODO This is the third inline TODO
-                 This is my third TODO.
+: **************** TODO some small task
+:                  DEADLINE: <2009-03-30 Mon>
+:                  :PROPERTIES:
+:                    :SOMETHING: or other
+:                  :END:
+:                  And here is some extra text
+: **************** END
+: 
+: **************** TODO This is the first inline TODO
+:                  I need to do that following thing for the first TODO:
+:                  1. First item for first TODO
+:                  2. Second item for first TODO
+: 
+: **************** TODO This is the second inline TODO
+:                  This is my second TODO.
+: 
+: **************** TODO This is the third inline TODO
+:                  This is my third TODO.
 
 * About Footnotes
 

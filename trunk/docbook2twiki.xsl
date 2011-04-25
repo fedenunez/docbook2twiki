@@ -404,13 +404,27 @@
 </xsl:template>
 
 <xsl:template match="d:th">
-  <xsl:text>*</xsl:text>
+  <xsl:text> *</xsl:text>
   <xsl:apply-templates/>
-  <xsl:text>* | </xsl:text>
+  <xsl:text>*  | </xsl:text>
 </xsl:template>
 
 <xsl:template match="d:td">
   <xsl:apply-templates/>
+  <xsl:text> | </xsl:text>
+</xsl:template>
+
+<!-- Tables with left- and right- alignment in columns -->
+<xsl:template match="d:informaltable[d:colgroup]/d:tbody/d:tr/d:td">
+  <xsl:param name="pos" select="position()"/>
+  <xsl:param name="align" select="../../../d:colgroup/d:col[$pos]/@align"/>
+  <xsl:if test="$align='right'">
+    <xsl:text> </xsl:text>
+  </xsl:if>
+  <xsl:apply-templates/>
+  <xsl:if test="$align='left'">
+    <xsl:text> </xsl:text>
+  </xsl:if>
   <xsl:text> | </xsl:text>
 </xsl:template>
 
