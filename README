@@ -5,27 +5,37 @@
 # $Id$
 #  
 
-This is an XSL stylesheet that converts DocBook documents
-(http://www.docbook.org/) to TWiki (http://www.twiki.org/) format.
+This project contains two XSL stylesheets that convert DocBook documents
+(http://www.docbook.org/) to TWiki (http://www.twiki.org/) and
+Confluence Wiki (http://www.atlassian.com/software/confluence/).
 
 This project was started soon after I finished the DocBook exporter (see
 http://code.google.com/p/bcui-emacs) for Emacs Org-mode
-(http://orgmode.org/).  Since I use TWiki at work, I have been hoping
-that I can export text files written in Org-mode into TWiki format using
-DocBook format as a bridge, assuming that somebody already wrote a
+(http://orgmode.org/).  Since I used TWiki at work, I had been hoping
+that I could export text files written in Org-mode into TWiki format
+using DocBook format as a bridge, assuming that somebody already wrote a
 stylesheet that converts DocBook documents to TWiki format.  However, I
 failed to find such a stylesheet after several hours of searching...
 
-This stylesheet is far from complete, but most of the formatting
-features supported in Org-mode are supported here.
+The stylesheet for Confluence Wiki was added later after I switched to a
+new company.
+
+Because DocBook contains more features than TWiki or Confluence Wiki
+does, the stylesheets only (and will always) support a subset of DocBook
+elements.  However most of the formatting features supported in Emacs
+Org-mode are supported here.
 
 This directory contains:
 
   README
       This file.
   
+  docbook2cfl.xsl
+      The XSL stylesheet the converts DocBook documents to Confluence
+      Wiki format.
+
   docbook2twiki.xsl
-      The XSL stylesheet.
+      The XSL stylesheet the converts DocBook documents to TWiki format.
 
   org-twiki.el
       Sample Emacs Lisp function that converts Org file to TWiki format
