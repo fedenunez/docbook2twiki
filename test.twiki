@@ -71,10 +71,10 @@ In Org-mode, an image file can be used as the description of a link, and the ima
 
 ---++ Inline Images in Tables 
 
-| *Image One* | *Image Two* | 
+|  *Image One*  |  *Image Two*  | 
 | <img src="%ATTACHURL%/GNU.png">
- | <img src="%ATTACHURL%/org-mode-unicorn.svg">
- | 
+  | <img src="%ATTACHURL%/org-mode-unicorn.svg">
+  | 
 
 ---+ About Timestamps, TODOs, and Tags 
 
@@ -97,26 +97,28 @@ For TODOs, we can simply put the TODO keywords in =[...]= to make them stand out
 
 ---+ Inline Tasks (TODOs) 
 
-This sections contains some inline task: 
-
-⇒⇒⇒ *TODO some small task*
+This sections contains some inline tasks (OBSOLETE): 
 
 <verbatim>
+**************** TODO some small task
+                 DEADLINE: <2009-03-30 Mon>
+                 :PROPERTIES:
+                   :SOMETHING: or other
+                 :END:
                  And here is some extra text
+**************** END
+
+**************** TODO This is the first inline TODO
+                 I need to do that following thing for the first TODO:
+                 1. First item for first TODO
+                 2. Second item for first TODO
+
+**************** TODO This is the second inline TODO
+                 This is my second TODO.
+
+**************** TODO This is the third inline TODO
+                 This is my third TODO.
 </verbatim>
-⇒⇒⇒ *TODO This is the first inline TODO*
-
-I need to do that following thing for the first TODO: 
-
-   1. First item for first TODO 
-   1. Second item for first TODO 
-⇒⇒⇒ *TODO This is the second inline TODO*
-
-This is my second TODO. 
-
-⇒⇒⇒ *TODO This is the third inline TODO*
-
-This is my third TODO. 
 
 ---+ About Footnotes 
 
@@ -159,7 +161,7 @@ Check the first footnote for the third time. {{Body of _first_ footnote.}}
 
 If a table has a caption, then it will be formatted as a regular table in DocBook using element =&lt;table&gt;=.  Here is an example table that has a caption "My Phone Book": 
 
-| *First Name* | *Last Name* | *Tele #* | 
+|  *First Name*  |  *Last Name*  |  *Tele #*  | 
 | Baoqiu | Cui | 123-4567 | 
 | David | Smith | 999-9999 | 
 | John | Dean | 888-8888 | 
@@ -169,10 +171,10 @@ If a table has a caption, then it will be formatted as a regular table in DocBoo
 
 Tables without a caption will be formatted as informal tables in DocBook using element =&lt;informaltable&gt;=.  Such tables do not have a caption. See this example: 
 
-| *Item* | *Owner* | *Due Date* | *Status* | 
-| 1 | Baoqiu | 2009-03-10 | Returned | 
-| 2 | Scott | 2009-03-20 | On Hold | 
-| 3 | John | 2009-04-20 | Overdue | 
+|  *Item*  |  *Owner*  |  *Due Date*  |  *Status*  | 
+|  1 | Baoqiu  |  2009-03-10 | Returned  | 
+|  2 | Scott  |  2009-03-20 | On Hold  | 
+|  3 | John  |  2009-04-20 | Overdue  | 
 
 ---+ About Verses and Quotes 
 
@@ -252,7 +254,7 @@ Drawers are something that people normally do not want to see.  So they should n
 
 ---++ This is a headline 
 
-Still outside the drawer. After the drawer. 
+Still outside the drawer.    After the drawer. 
 
 ---+ About Typesetting 
 
@@ -292,17 +294,17 @@ This is an ordered list:
 
 This is a variable list (a.k.a. Variable Lists in DocBook): 
 
-   $ Term One: Term 1 definition.  Term 1 definition.  Term 1 definition.  Term 1 definition.  Term 1 definition. Term 1 definition.  Term 1 definition. 
-   $ Term Two: Term 2 definition.  Term 2 definition.  Term 2 definition.  Term 2 definition.  Term 2 definition. Term 2 definition.  Term 2 definition.  Term 2 definition.  Term 2 definition. 
+   $ Term One: Term 1 definition.  Term 1 definition.  Term 1                 definition.  Term 1 definition.  Term 1 definition.                 Term 1 definition.  Term 1 definition. 
+   $ Term Two: Term 2 definition.  Term 2 definition.  Term 2                 definition.  Term 2 definition.  Term 2 definition.                 Term 2 definition.  Term 2 definition.  Term 2                 definition.  Term 2 definition. 
 
 ---++ Check Box Lists 
 
 This is a check box list: 
 
-   * =[-]= Check boxes [2/3] 
-      * =[X]= Check box 1 
-      * =[ ]= Check box 2 
-      * =[X]= Check box 3 
+   * [-] Check boxes [2/3] 
+      * [X] Check box 1 
+      * [ ] Check box 2 
+      * [X] Check box 3 
 
 ---++ Nested Lists with Different List Types 
 
@@ -310,14 +312,14 @@ This is a 3-level nested list:
 
    * Item one. 
      %BR%%BR%
-     This item contains a description list (or _variable list_ in DocBook): 
+     This item contains a description list (or _variable list_ in     DocBook): 
       $ Term ONE: This is term one. 
       $ Term TWO: This is term two. 
          1. Description one. 
             %BR%%BR%
             Second paragraph in description one. 
             %BR%%BR%
-            Third paragraph in description one.  After this paragraph, we have two consecutive lists with different list types.  These two lists should have been exported as _two_ different lists, but Org mode currently does not support this: 
+            Third paragraph in description one.  After this                      paragraph, we have two consecutive lists with                      different list types.  These two lists should have                      been exported as _two_ different lists, but Org                      mode currently does not support this: 
             1. Ordered list item one 
             1. Ordered list item two 
             1. Itemized list item one 
@@ -328,9 +330,9 @@ This is a 3-level nested list:
 Code in description two (line 1)
 Code in description two (line 2)
 </verbatim>
-            | *First* | *Last* | *Phone* | 
-            | Baoqiu | Cui | 123-4567 | 
-            | David | Smith | 999-9999 | 
+            |  *First*  |  *Last*  |  *Phone*  | 
+            | Baoqiu  | Cui  |  123-4567 | 
+            | David  | Smith  |  999-9999 | 
          1. Description three. 
         %BR%%BR%
         Another paragraph for "Term TWO". 
@@ -353,10 +355,10 @@ My favorite scenes are (in this order)
       * on DVD only 
       %BR%%BR%
       He makes a really funny face when it happens. 
-But in the end, no individual scenes matter but the film as a whole. Important actors in this film are: 
+But in the end, no individual scenes matter but the film as a whole.         Important actors in this film are: 
 
    $ Elijah Wood: He plays Frodo 
-   $ Sean Austin: He plays Sam, Frodo's friend.  I still remember him very well from his role as Mikey Walsh in the Goonies. 
+   $ Sean Austin: He plays Sam, Frodo's friend.  I still remember           him very well from his role as Mikey Walsh in the Goonies. 
 
 ---+ About Code Reference Labels 
 
