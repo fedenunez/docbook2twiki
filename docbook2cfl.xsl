@@ -58,17 +58,29 @@
 
 <xsl:template match="d:imagedata">
   <xsl:if test="parent::d:imageobject[@role!='fo' or not(@role)]">
-  <xsl:text>&lt;img src="%ATTACHURL%/</xsl:text>
-  <xsl:call-template name="getfilename">
-    <xsl:with-param name="fileref">
-      <xsl:value-of select="@fileref"/>
-    </xsl:with-param>
-  </xsl:call-template>
-  <xsl:text>"&gt;</xsl:text>
-  <xsl:call-template name="newline"/>
+    <xsl:text>!</xsl:text>
+    <xsl:call-template name="getfilename">
+      <xsl:with-param name="fileref">
+        <xsl:value-of select="@fileref"/>
+      </xsl:with-param>
+    </xsl:call-template>
+    <xsl:text>|</xsl:text>
+    <xsl:choose>
+      <xsl:when test="@align = 'left'">
+        <xsl:text>align=left</xsl:text>
+      </xsl:when>
+      <xsl:when test="@align = 'right'">
+        <xsl:text>align=right</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>align=center</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>!</xsl:text>
+    <xsl:call-template name="newline"/>
   </xsl:if>  
 </xsl:template>
-    
+
 <!-- chapter title -->
 
 <xsl:template match="d:title[parent::d:chapter]">
